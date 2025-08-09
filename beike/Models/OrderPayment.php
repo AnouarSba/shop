@@ -1,0 +1,19 @@
+<?php
+/**
+ * OrderPayment.php
+ *
+ *
+ * @created    2023-05-25 10:02:52
+ * @modified   2023-05-25 10:02:52
+ */
+
+namespace Beike\Models;
+
+class OrderPayment extends Base
+{
+    protected $table = 'order_payments';
+
+    protected $fillable = [
+        'order_id', 'transaction_id', 'request', 'response', 'callback', 'receipt',
+    ];
+}

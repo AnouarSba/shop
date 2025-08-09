@@ -1,0 +1,18 @@
+<?php
+/**
+ * Lang.php
+ *
+ *
+ * @created    2023-09-09 09:09:09
+ * @modified   2023-12-12 07:15:30
+ */
+
+return [
+    'approved'       => 'A été vérifié',
+    'customer_group' => 'groupe d\'utilisateurs',
+    'email'          => 'Email',
+    'from'           => 'source enregistrée',
+    'name'           => 'Nom',
+    'pending'        => 'À examiner',
+    'rejected'       => 'A été refusé',
+];
