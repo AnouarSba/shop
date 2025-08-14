@@ -1,0 +1,63 @@
+<?php
+/**
+ * Lang.php
+ *
+ *
+ * @created    2023-09-09 09:09:09
+ * @modified   2023-09-13 05:45:07
+ */
+
+return [
+    'can_empty'               => 'لا يمكن أن يكون فارغا',
+    'click_upload'            => 'انقر فوق تحميل ، أو اسحب الصورة هنا',
+    'confirm_delete_file'     => 'هل تريد حذف الملف المحدد',
+    'confirm_delete_folder'   => 'عملية حذف المجلد قيد التقدم ، سيتم حذف جميع الملفات في المجلد ، هل تريد تأكيد؟',
+    'copy_link'               => 'نسخ الوصلة',
+    'copy_success'            => 'نسخ النجاح',
+    'create_folder'           => 'إنشاء مجلد',
+    'directory_already_exist' => 'الدليل موجود بالفعل!',
+    'directory_not_empty'     => 'الدليل غير فارغ!',
+    'download'                => 'تحميل',
+    'drop_file_hint'          => 'هل ترغب في نقل ملفات <span class = "drop-hint"> </span> داخل <span class = "drop-hint"> </span>؟',
+    'drop_folder_hint'        => 'هل تريد نقل <span class = "drop-hint"> </span> Inside <span class = "drop heint"> </span>؟',
+    'file_manager'            => 'مدير الملف',
+    'file_manager_create'     => 'يخلق',
+    'file_manager_delete'     => 'يمسح',
+    'file_manager_show'       => 'منظر',
+    'file_manager_update'     => 'إعادة تسمية',
+    'file_name'               => 'اسم الملف',
+    'file_sorting'            => 'فرز الملف',
+    'finish'                  => 'ينهي',
+    'image_uploading'         => 'تحميل الصور',
+    'new_folder'              => 'مجلد جديد',
+    'no_file'                 => 'لا يوجد ملف',
+    'picture_space'           => 'مساحة الصورة',
+    'rename'                  => 'إعادة تسمية',
+    'show_pc'                 => 'يرجى الذهاب إلى جانب الكمبيوتر للعمل',
+    'source_dir_empty'        => 'لا يمكن أن يكون دليل المصدر فارغًا',
+    'target_dir_exist'        => 'الدليل المستهدف موجود بالفعل',
+    'target_not_exist'        => 'الملف الهدف/الدليل غير موجود!',
+    'text_asc'                => 'صعود',
+    'text_created'            => 'خلق الوقت',
+    'text_desc'               => 'أصل',
+    'text_type'               => 'يكتب',
+    'to_sort'                 => 'نوع',
+    'upload_fail'             => 'فشل التحميل',
+    'upload_files'            => 'رفع',
+    'uploading'               => 'تحميل...',
+    'verify_select_image'     => 'الرجاء تحديد صورة',
+    'rename_failed'           => 'فشل إعادة تسمية ، يرجى التحقق من الاسم',
+    'verify_select_video'     => 'الرجاء تحديد الفيديو',
+    'upload_hint_1' => 'تحميل إلى الدليل',
+    'upload_hint_2' => 'الحد الأقصى لحمل التحميل لملف واحد: max_size.',
+    'modify_size_limit' => 'كيفية تعديل حد الحجم؟',
+    'upload_type_fail'  => 'فشل التحميل: نوع الملف غير صالح',
+    'upload_size_fail'  => 'فشل التحميل: حجم الملف يتجاوز الحد',
+    'invalid_path'              => 'معلمة مسار غير صالحة',
+    'empty_source_path'         => 'لا يمكن أن يكون مسار المصدر فارغًا',
+    'empty_dest_path'           => 'لا يمكن أن يكون مسار الوجهة فارغًا',
+    'invalid_filename'          => 'اسم الملف غير صالح',
+    'invalid_request_data'      => 'بيانات طلب غير صالحة',
+    'invalid_files_parameter'   => 'معلمة الملفات غير صالحة',
+    'invalid_upload_type'       => 'نوع التحميل غير صالح',
+];

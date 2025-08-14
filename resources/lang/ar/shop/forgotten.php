@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * forgotten.php
+ *
+ * @copyright  2022 beikeshop.com - All Rights Reserved
+ * @link       https://beikeshop.com
+ * @author     TL <mengwb@guangda.work>
+ * @created    2022-07-28 17:21:38
+ * @modified   2022-07-28 17:21:38
+ */
+
+return [
+    'index'                  => 'هل نسيت كلمة السر',
+    'follow_prompt'          => 'يرجى اتباع المطالبات لاسترداد كلمة المرور الخاصة بك',
+    'email_forCode'          => 'الرجاء إدخال عنوان بريدك الإلكتروني للحصول على رمز التحقق',
+    'enter_password'         => 'الرجاء إدخال كلمة مرور جديدة',
+    'email'                  => 'بريد إلكتروني',
+    'email_address'          => 'عنوان البريد الإلكتروني',
+    'verification_code'      => 'رمز التحقق',
+    'password'               => 'كلمة المرور',
+    'confirm_password'       => 'تأكيد كلمة المرور',
+    'send_code'              => 'إرسال الرمز',
+    'to_back'                => 'العودة إلى الخطوة السابقة',
+    'enter_password'         => 'الرجاء إدخال كلمة المرور',
+    'enter_email'            => 'الرجاء إدخال بريدك الإلكتروني',
+    'please_confirm'         => 'يرجى تأكيد كلمة المرور الخاصة بك',
+    'password_err'           => 'كلمات المرور التي تم إدخالها مرتين لا تتطابق!',
+    'email_err'              => 'يرجى إدخال عنوان بريد إلكتروني صالح!',
+    'enter_code'             => 'الرجاء إدخال رمز التحقق',
+    'verification_code_sent' => 'تم إرسال رمز التحقق. الرجاء إدخال الرمز',
+    'password_updated'       => 'تم تحديث كلمة المرور',
+];

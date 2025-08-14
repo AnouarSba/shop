@@ -242,7 +242,7 @@ return [
     ],
 
     'langs' => [
-        'fr','en'
+        'fr','en','ar'
     ],
 
     'free_plugin_codes' => [
