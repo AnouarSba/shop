@@ -14,7 +14,7 @@ use Beike\Repositories\BrandRepo;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-
+use DB;
 class BrandController extends Controller
 {
     /**
@@ -52,7 +52,34 @@ class BrandController extends Controller
         hook_action('admin.brand.store.before', $data);
         $brand = BrandRepo::create($requestData);
         hook_action('admin.brand.store.after', ['brand' => $brand, 'request_data' => $requestData]);
+        $setting = DB::table('settings')
+        ->where('name', 'design_setting')
+        ->where('type', 'system')
+        ->where('space', 'base')
+        ->first();
 
+    if (!$setting) {
+        $this->error('design_setting not found.');
+        return [];
+    }
+
+    $value = json_decode($setting->value, true);
+
+    // 2. Find the brand module
+    foreach ($value['modules'] as &$module) {
+        if ($module['code'] === 'brand') {
+            // 3. Update brands with latest 12 brand IDs
+            $module['content']['brands'] = Brand::latest()->take(12)->pluck('id')->toArray();
+            break;
+        }
+    }
+
+    // 4. Save back the updated value
+    DB::table('settings')->where('id', $setting->id)->update([
+        'value' => json_encode($value, JSON_UNESCAPED_UNICODE)
+    ]);
+
+    info('Brand module updated successfully.');
         return json_success(trans('common.created_success'), $brand);
     }
 

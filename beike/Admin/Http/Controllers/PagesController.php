@@ -17,7 +17,7 @@ use Beike\Shop\Http\Resources\ProductSimple;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-
+use DB;
 class PagesController extends Controller
 {
     /**
@@ -55,10 +55,65 @@ class PagesController extends Controller
     public function store(PageRequest $request)
     {
         try {
+            $locale = app()->getLocale(); // Or set manually, e.g. 'en'
+
             $requestData = $request->all();
             $page        = PageRepo::createOrUpdate($requestData);
             hook_action('admin.page.store.after', ['request_data' => $requestData, 'page' => $page]);
+            $latestPages = DB::table('page_descriptions')
+                ->where('locale', $locale)
+                ->orderBy('created_at', 'desc')
+                ->take(4)
+                ->pluck('page_id')
+                ->toArray();
+            if (empty($latestPages)) {
+                $this->error('No pages found.');
+                return;
+            }
 
+            // Fetch design_setting row
+            $setting = DB::table('settings')
+                ->where('name', 'design_setting')
+                ->where('type', 'system')
+                ->where('space', 'base')
+                ->first();
+
+            if (!$setting) {
+                $this->error('design_setting not found.');
+                return;
+            }
+
+            $value = json_decode($setting->value, true);
+            // Find the page module and update its items
+            $updated = false;
+            foreach ($value['modules'] as &$module) {
+                if ($module['code'] === 'page') {
+                    $module['content']['items'] = $latestPages;
+
+                    // Optional: update title translations
+                    $module['content']['title'] = [
+                        'en' => 'Blogs',
+                        'fr' => 'Articles',
+                        'ar' => 'مدونات'
+                    ];
+
+                    $updated = true;
+                    break;
+                }
+            }
+
+            if (!$updated) {
+                $this->error('No module with code "page" found.');
+                return;
+            }
+
+            // Save back to DB
+            DB::table('settings')->where('id', $setting->id)->update([
+                'value' => json_encode($value, JSON_UNESCAPED_UNICODE)
+            ]);
+
+            info('Page module updated successfully with latest page items.');
+ 
             return redirect(admin_route('pages.index'));
         } catch (\Exception $e) {
             return $this->handleDatabaseException($e);
@@ -97,7 +152,7 @@ class PagesController extends Controller
             $requestData['id'] = $pageId;
             $page              = PageRepo::createOrUpdate($requestData);
             hook_action('admin.page.update.after', ['request_data' => $requestData, 'page' => $page]);
-
+    
             return redirect()->to(admin_route('pages.index'))->with('success', trans('common.updated_success'));
         } catch (\Exception $e) {
             return $this->handleDatabaseException($e);

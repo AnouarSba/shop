@@ -96,7 +96,53 @@ class ProductController extends Controller
             hook_action('admin.product.store.after', $data);
 
             DB::commit();
+             $setting = DB::table('settings')
+        ->where('name', 'design_setting')
+        ->where('type', 'system')
+        ->where('space', 'base')
+        ->first();
+
+    if (!$setting) {
+        $this->error('design_setting not found.');
+        return;
+    }
+
+    $value = json_decode($setting->value, true);
+    // 2. Find tab_product module
+    foreach ($value['modules'] as &$module) {
+
+        if ($module['code'] === 'tab_product') {
+
+            // Example: First tab = latest 8 products
+            $latestProducts = Product::latest()->take(8)->pluck('id')->toArray();
+
+            // Example: Second tab = most popular 8 products (customize logic)
+            $popularProducts = Product::orderBy('sales', 'desc')->take(8)->pluck('id')->toArray();
+
+            $module['content']['tabs'] = [
+                [
+                    'title' => ['en' => 'New'],
+                    'products' => $latestProducts
+                ],
+                [
+                    'title' => ['en' => 'Best Selling'],
+                    'products' => $popularProducts
+                ]
+            ];
+
+            break;
+        }
+    }
+
+    // 3. Save updated JSON
+    DB::table('settings')->where('id', $setting->id)->update([
+        'value' => json_encode($value, JSON_UNESCAPED_UNICODE)
+    ]);
+
+    info('Tab product module updated.');
+
             return redirect()->to($actionType == 'stay' ? admin_route('products.create') : admin_route('products.index'))->with('success', trans('common.created_success'));
+        
         } catch (\Exception $e) {
             DB::rollBack();
             return redirect(admin_route('products.create'))
