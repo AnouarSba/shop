@@ -2,9 +2,7 @@
 /**
  * LanguageController.php
  *
- * @copyright  2022 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     TL <mengwb@guangda.work>
+ *
  * @created    2022-07-05 16:37:04
  * @created    2022-07-05 16:37:04
  */

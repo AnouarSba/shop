@@ -278,7 +278,7 @@ class FileManagerController extends Controller
 
             $zipFile = $this->fileManagerService->zipFolder($imagePath);
 
-            // 安全的文件名处理
+            // 安全的文件名
             $safeFileName = preg_replace('/[^a-zA-Z0-9\-_\.]/', '', basename($zipFile));
 
             header('Content-Type: application/zip');

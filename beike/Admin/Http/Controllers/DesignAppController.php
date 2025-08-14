@@ -10,7 +10,7 @@ use Illuminate\View\View;
 class DesignAppController extends Controller
 {
     /**
-     * 展示所有模块编辑器
+     * 展示所有编辑器
      *
      * @param Request $request
      * @return View

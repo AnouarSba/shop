@@ -152,7 +152,7 @@ function type_label($type, $value, array $texts = []): string
 }
 
 /**
- * 处理配置链接
+ * 配置链接
  *
  * @param $link
  * @return array
@@ -796,7 +796,7 @@ function registry($key, $default = null): mixed
 }
 
 /**
- * 处理域名, 去除协议前缀
+ * 域名, 去除协议前缀
  *
  * @param $domain
  * @return string
@@ -987,7 +987,7 @@ function get_domain($domain = null)
     $count = count($parts);
 
     if ($count > 2) {
-        // 处理类似 'example.co.uk' 或 'sub.example.co.uk' 的域名
+        // 类似 'example.co.uk' 或 'sub.example.co.uk' 的域名
         $last_two = implode('.', array_slice($parts, -2));
         $last_three = implode('.', array_slice($parts, -3));
 

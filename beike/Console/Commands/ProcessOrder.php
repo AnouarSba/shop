@@ -60,7 +60,7 @@ class ProcessOrder extends Command
         $orderTotal = $unpaidOrders->count();
         foreach ($unpaidOrders as $index => $order) {
             $count = $index + 1;
-            $this->logInfo("处理 $count/$orderTotal: ID:$order->id - Number: $order->number - $order->created_at");
+            $this->logInfo(" $count/$orderTotal: ID:$order->id - Number: $order->number - $order->created_at");
             (new StateMachineService($order))->changeStatus(StateMachineService::CANCELLED);
         }
     }
@@ -90,7 +90,7 @@ class ProcessOrder extends Command
         $orderTotal = $unpaidOrders->count();
         foreach ($unpaidOrders as $index => $order) {
             $count = $index + 1;
-            $this->logInfo("处理 $count/$orderTotal: ID:$order->id - Number: $order->number - $order->created_at");
+            $this->logInfo(" $count/$orderTotal: ID:$order->id - Number: $order->number - $order->created_at");
 
             $shipHistory = OrderHistory::query()->where('order_id', $order->id)->orderByDesc('id')->first();
             if (empty($shipHistory)) {

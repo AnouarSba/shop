@@ -2,9 +2,7 @@
 /**
  * BreadCrumb.php
  *
- * @copyright  2022 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     Edward Yang <yangjin@guangda.work>
+ * 
  * @created    2022-08-17 22:45:42
  * @modified   2022-08-17 22:45:42
  */
@@ -244,7 +242,7 @@ class Breadcrumb extends Component
     }
 
     /**
-     * 处理个人中心面包屑
+     * 个人中心面包屑
      *
      * @param $value
      * @return array[]

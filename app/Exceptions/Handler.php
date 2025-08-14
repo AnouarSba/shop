@@ -86,7 +86,7 @@ class Handler extends ExceptionHandler
     public function render($request, Throwable $exception)
     {
         if ($request->expectsJson()) {
-            // 处理权限验证异常
+            // 权限验证异常
             if ($exception instanceof AuthorizationException) {
                 return response()->json([
                     'code'    => 403,
@@ -94,7 +94,7 @@ class Handler extends ExceptionHandler
                 ], 403);
             }
 
-            // 处理表单验证异常
+            // 表单验证异常
             if ($exception instanceof ValidationException) {
                 return response()->json([
                     'code'    => 422,

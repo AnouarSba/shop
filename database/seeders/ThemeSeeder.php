@@ -967,7 +967,7 @@ class ThemeSeeder extends Seeder
                         ]
                     ],
                     "module_id" =>"0htwy33z3xcituyx",
-                    "name" =>"单图模块"
+                    "name" =>"单图"
                 ],
                 [
                     "code" =>"brand",
@@ -1000,7 +1000,7 @@ class ThemeSeeder extends Seeder
                         ]
                     ],
                     "module_id" =>"yln7isoqlxovqz3k",
-                    "name" =>"品牌模块"
+                    "name" =>"品牌"
                 ],
                 [
                     "code" =>"page",
@@ -1024,7 +1024,7 @@ class ThemeSeeder extends Seeder
                         ]
                     ],
                     "module_id" =>"24P9p4bRwk1nbtXE",
-                    "name" =>"文章模块",
+                    "name" =>"文章",
                     "view_path" =>""
                 ]
             ]

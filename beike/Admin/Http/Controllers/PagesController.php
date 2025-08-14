@@ -2,9 +2,7 @@
 /**
  * PagesController.php
  *
- * @copyright  2022 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     Edward Yang <yangjin@guangda.work>
+ * 
  * @created    2022-08-08 15:07:33
  * @modified   2022-08-08 15:07:33
  */
@@ -161,7 +159,7 @@ class PagesController extends Controller
         return json_success(trans('common.get_success'), $name);
     }
 
-    // 文章提交异常处理，优化长度限制提示
+    // 文章提交异常，优化长度限制提示
     private function handleDatabaseException(\Exception $e)
     {
         $errorMessage = $e->getMessage();

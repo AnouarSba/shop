@@ -64,7 +64,7 @@ class Header extends Component
     }
 
     /**
-     * 处理最近访问链接
+     * 最近访问链接
      */
     private function handleHistoryLinks(): array
     {

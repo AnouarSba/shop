@@ -3,9 +3,7 @@
 /**
  * FooterRepo.php
  *
- * @copyright  2022 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     Edward Yang <yangjin@guangda.work>
+ * 
  * @created    2022-08-11 18:16:06
  * @modified   2022-08-11 18:16:06
  */
@@ -15,7 +13,7 @@ namespace Beike\Repositories;
 class MenuRepo
 {
     /**
-     * 处理页头编辑器数据
+     * 页头编辑器数据
      *
      * @return array|mixed
      * @throws \Exception
@@ -45,7 +43,7 @@ class MenuRepo
     }
 
     /**
-     * 处理头部 menu 子菜单数据
+     * 头部 menu 子菜单数据
      *
      * @param $childrenGroups
      * @return mixed

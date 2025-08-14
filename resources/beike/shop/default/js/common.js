@@ -176,7 +176,7 @@ export default {
     }
   },
 
-  // 处理用户采集来的商品 图片尺寸比例失衡问题，强制 1:1
+  // 用户采集来的商品 图片尺寸比例失衡问题，强制 1:1
   productImageResize11() {
     if ($('.image-old').length && $('.image-old').width() > 0) {
       $('.image-old').height($('.image-old').width())

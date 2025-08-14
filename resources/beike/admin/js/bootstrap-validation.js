@@ -41,7 +41,7 @@ $(function () {
     form.addEventListener(
       "submit",
       function (event) {
-        // 处理一组 checkbox 必选 的情况
+        // 一组 checkbox 必选 的情况
         let isCheckboxValid = true;
         $(form).find('.form-checkbox.required').each(function() {
           const checkboxes = $(this).find('input[type="checkbox"]');

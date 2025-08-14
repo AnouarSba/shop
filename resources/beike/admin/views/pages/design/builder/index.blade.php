@@ -102,7 +102,7 @@
       previewWindow = document.getElementById("preview-iframe").contentWindow;
       app.design.ready = true;
 
-      // 编辑模块
+      // 编辑
       $(previewWindow.document).on('click', '.module-edit .edit', function(event) {
         const module_id = $(this).parents('.module-item').prop('id').replace('module-', '');
         const modules = app.form.modules;
@@ -110,7 +110,7 @@
         app.editModuleButtonClicked(editingModuleIndex);
       });
 
-      // 删除模块
+      // 删除
       $(previewWindow.document).on('click', '.module-edit .delete', function(event) {
         const module_id = $(this).parents('.module-item').prop('id').replace('module-', '');
         const editingModuleIndex = app.form.modules.findIndex(e => e.module_id == module_id);
@@ -121,7 +121,7 @@
         app.form.modules.splice(editingModuleIndex, 1);
       });
 
-      // 模块位置改变，点击.module-edit .up或者.down
+      // 位置改变，点击.module-edit .up或者.down
       $(previewWindow.document).on('click', '.module-edit .up, .module-edit .down', function(event) {
         const module_id = $(this).parents('.module-item').prop('id').replace('module-', '');
         const modules = app.form.modules;
@@ -214,7 +214,7 @@
           sidebar: true,
           editingModuleIndex: 0,
           ready: false,
-          moduleLoadCount: 0, // 第一次选择已配置模块时，不需要请求数据，
+          moduleLoadCount: 0, // 第一次选择已配置时，不需要请求数据，
         },
 
         source: {
@@ -224,12 +224,12 @@
       },
       // 计算属性
       computed: {
-        // 编辑中的模块编辑组件
+        // 编辑中的编辑组件
         editingModuleComponent() {
           return 'module-editor-' + this.editingModuleCode.replace('_', '-');
         },
 
-        // 编辑中的模块 code
+        // 编辑中的 code
         editingModuleCode() {
           return this.form.modules[this.design.editingModuleIndex].code;
         },
@@ -287,7 +287,7 @@
           })
         },
 
-        // 编辑模块
+        // 编辑
         editModuleButtonClicked(index) {
           this.design.moduleLoadCount = 0;
           this.design.editingModuleIndex = index;

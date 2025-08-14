@@ -2,9 +2,7 @@
 /**
  * PermissionRepo.php
  *
- * @copyright  2022 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     Edward Yang <yangjin@guangda.work>
+ * 
  * @created    2022-08-01 20:49:45
  * @modified   2022-08-01 20:49:45
  */
@@ -482,7 +480,7 @@ class PermissionRepo
         return hook_filter('role.design_app_home_permissions', $items);
     }
     /**
-     * 处理第三方插件权限
+     * 第三方插件权限
      *
      * @param $pluginPermissions
      * @return array
@@ -512,7 +510,7 @@ class PermissionRepo
     }
 
     /**
-     * 根据模块和路由返回权限列表
+     * 根据和路由返回权限列表
      *
      * @param $module
      * @param $routes

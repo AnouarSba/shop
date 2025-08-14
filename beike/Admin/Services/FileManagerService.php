@@ -2,9 +2,7 @@
 /**
  * FileManagerService.php
  *
- * @copyright  2022 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     Edward Yang <yangjin@guangda.work>
+ * 
  * @created    2022-07-12 15:12:48
  * @modified   2022-07-12 15:12:48
  */
@@ -102,7 +100,7 @@ class FileManagerService
         $start = ($page - 1) * $perPage;
         $fileData = array_slice($fileData, $start, $perPage);
 
-        // 处理文件
+        // 文件
         $images = array_map(function ($file) {
             return $this->handleImage(str_replace(public_path('catalog'), '', $file['path']), $file['basename']);
         }, $fileData);
@@ -335,7 +333,7 @@ class FileManagerService
     }
 
     /**
-     * 处理文件夹
+     * 文件夹
      *
      * @param $folderPath
      * @param $baseName
@@ -369,7 +367,7 @@ class FileManagerService
     }
 
     /**
-     * 处理文件
+     * 文件
      *
      * @param $filePath
      * @param $baseName

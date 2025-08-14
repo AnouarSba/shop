@@ -2,9 +2,7 @@
 /**
  * DesignService.php
  *
- * @copyright  2022 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     Edward Yang <yangjin@guangda.work>
+ * 
  * @created    2022-07-14 20:57:37
  * @modified   2022-07-14 20:57:37
  */
@@ -72,7 +70,7 @@ class DesignService
     }
 
     /**
-     * 处理 SlideShow 模块
+     *  SlideShow 
      *
      * @param $content
      * @return array
@@ -91,7 +89,7 @@ class DesignService
     }
 
     /**
-     * 处理 brand 模块
+     *  brand 
      *
      * @param $content
      * @return array
@@ -109,7 +107,7 @@ class DesignService
     }
 
     /**
-     * 处理 SlideShow 模块
+     *  SlideShow 
      *
      * @param $content
      * @return array
@@ -129,7 +127,7 @@ class DesignService
     }
 
     /**
-     * 处理 icons 模块
+     *  icons 
      *
      * @param $content
      * @return array
@@ -160,7 +158,7 @@ class DesignService
     }
 
     /**
-     * 处理 rich_text 模块
+     *  rich_text 
      *
      * @param $content
      * @return array
@@ -174,7 +172,7 @@ class DesignService
     }
 
     /**
-     * 处理选项卡商品列表模块
+     * 选项卡商品列表
      *
      * @param $content
      * @return array
@@ -200,7 +198,7 @@ class DesignService
     }
 
     /**
-     * 处理文章模块
+     * 文章
      *
      * @param $content
      * @return array
@@ -216,7 +214,7 @@ class DesignService
     }
 
     /**
-     * 处理商品模块
+     * 商品
      *
      * @param $content
      * @return array
@@ -231,7 +229,7 @@ class DesignService
     }
 
     /**
-     * 处理图片以及链接
+     * 图片以及链接
      * @throws \Exception
      */
     private static function handleImages($images): array
@@ -259,7 +257,7 @@ class DesignService
     }
 
     /**
-     * 处理链接
+     * 链接
      *
      * @param $type
      * @param $value

@@ -412,7 +412,7 @@ table.table thead th, .fw-bold, h1,h2,h3, h4, h5, h6, b, strong, .card .card-hea
 }
 
 
-// 处理 el-form 表单在非中文情况下的 显示问题
+//  el-form 表单在非中文情况下的 显示问题
 @media (min-width: 768px) {
   body:not(.fr) {
     .el-form:not(.el-form--label-top) {

@@ -2,9 +2,7 @@
 /**
  * Plugin.php
  *
- * @copyright  2022 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     Edward Yang <yangjin@guangda.work>
+ * 
  * @created    2022-06-29 20:27:21
  * @modified   2022-06-29 20:27:21
  */
@@ -142,7 +140,7 @@ class Plugin implements \ArrayAccess, Arrayable
     }
 
     /**
-     * 处理插件后台设置字段多语言 优先级: label > label_key
+     * 插件后台设置字段多语言 优先级: label > label_key
      * 有label字段则直接返回, label_key 则翻译
      */
     public function handleLabel(): void

@@ -155,7 +155,7 @@ class Sidebar extends Component
     }
 
     /**
-     * 处理是否选中等数据
+     * 是否选中等数据
      */
     private function handleMenus()
     {
