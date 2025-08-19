@@ -12,5 +12,5 @@ return [
     'invalid_order'      => 'أمر غير صالح',
     'confirm_order'      => 'تأكيد العميل الحزمة المستلمة',
     'cancel_order'       => 'العميل يلغي الطلب',
-    'order_already_paid' => 'تم دفع الطلب بالفعل',
+    'order_already_confirmed' => 'تم تأكيد الطلب بالفعل',
 ];

@@ -24,7 +24,7 @@ class Order extends Base
 
     protected $fillable = [
         'number', 'customer_id', 'customer_group_id', 'shipping_address_id', 'payment_address_id', 'customer_name',
-        'email', 'calling_code', 'telephone', 'total', 'locale', 'currency_code', 'currency_value', 'ip', 'user_agent',
+        'email', 'phone', 'calling_code', 'telephone', 'total', 'locale', 'currency_code', 'currency_value', 'ip', 'user_agent',
         'comment', 'status', 'shipping_method_code', 'shipping_method_name', 'shipping_customer_name', 'shipping_calling_code',
         'shipping_telephone', 'shipping_country', 'shipping_country_id', 'shipping_zone', 'shipping_zone_id', 'shipping_city',
         'shipping_address_1', 'shipping_zipcode', 'shipping_address_2', 'payment_method_code', 'payment_method_name',

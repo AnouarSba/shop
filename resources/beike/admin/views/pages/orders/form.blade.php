@@ -24,10 +24,6 @@
                 <td>{{ $order->number }}</td>
               </tr>
               <tr>
-                <td>{{ __('order.payment_method') }}：</td>
-                <td>{{ $order->payment_method_name }}</td>
-              </tr>
-              <tr>
                 <td>{{ __('admin/plugin.shipping') }}：</td>
                 <td>{{ $order->shipping_method_name }}</td>
               </tr>
@@ -62,6 +58,10 @@
               <tr>
                 <td>{{ __('order.updated_at') }}：</td>
                 <td>{{ $order->updated_at }}</td>
+              </tr>
+              <tr>
+                <td>{{ __('common.phone') }}：</td>
+                <td>{{ $order->phone }}</td>
               </tr>
               @hook('admin.order.form.base.updated_at.after')
             </tbody>

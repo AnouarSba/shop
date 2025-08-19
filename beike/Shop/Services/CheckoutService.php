@@ -115,9 +115,8 @@ class CheckoutService
 
         try {
             DB::beginTransaction();
-
             $order = OrderRepo::create($checkoutData);
-            StateMachineService::getInstance($order)->changeStatus(StateMachineService::UNPAID, '', true);
+            StateMachineService::getInstance($order)->changeStatus(StateMachineService::unconfirmed, '', true);
             CartRepo::clearSelectedCartProducts($customer);
 
             hook_action('service.checkout.confirm.after', ['order' => $order, 'cart' => $this->cart]);
@@ -184,10 +183,10 @@ class CheckoutService
             }
         }
 
-        $paymentMethodCode = $current['payment_method_code'];
-        if (! PluginRepo::paymentEnabled($paymentMethodCode)) {
-            throw new \Exception(trans('shop/carts.invalid_payment_method'));
-        }
+        // $paymentMethodCode = $current['payment_method_code'];
+        // if (! PluginRepo::paymentEnabled($paymentMethodCode)) {
+        //     throw new \Exception(trans('shop/carts.invalid_payment_method'));
+        // }
 
         hook_action('service.checkout.validate_confirm.after', $checkoutData);
     }

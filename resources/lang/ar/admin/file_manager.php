@@ -23,7 +23,7 @@ return [
     'file_manager'            => 'مدير الملف',
     'file_manager_create'     => 'يخلق',
     'file_manager_delete'     => 'يمسح',
-    'file_manager_show'       => 'منظر',
+    'file_manager_show'       => 'متابعة',
     'file_manager_update'     => 'إعادة تسمية',
     'file_name'               => 'اسم الملف',
     'file_sorting'            => 'فرز الملف',

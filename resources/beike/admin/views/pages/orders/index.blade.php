@@ -76,7 +76,6 @@
                 <th>{{ __('order.id') }}</th>
                 <th>{{ __('order.number') }}</th>
                 <th>{{ __('order.customer_name') }}</th>
-                <th>{{ __('order.payment_method') }}</th>
                 <th>{{ __('order.status') }}</th>
                 <th>{{ __('order.total') }}</th>
                 @hook('admin.order.list.item.th.total.after')
@@ -93,7 +92,6 @@
                     <td>{{ $order->id }}</td>
                     <td>{{ $order->number }}</td>
                     <td>{{ sub_string($order->customer_name, 14) }}</td>
-                    <td>{{ $order->payment_method_name }}</td>
                     <td>{{ $order->status_format }}</td>
                     <td>{{ currency_format($order->total, $order->currency_code, $order->currency_value) }}</td>
                     @hook('admin.order.list.item.td.total.after')

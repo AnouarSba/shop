@@ -93,7 +93,7 @@ return [
     'unauthenticated'      => 'الرجاء تسجيل الدخول أولاً',
     'updated_at'           => 'تحديث في',
     'updated_success'      => 'تحديث بنجاح!',
-    'view'                 => 'منظر',
+    'view'                 => 'متابعة',
     'view_details'         => 'تحقق من التفاصيل',
     'view_more'            => 'عرض المزيد',
     'whether_open'         => 'حالة',

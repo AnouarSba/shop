@@ -30,7 +30,7 @@ return [
     'error_payment_address'    => 'Please select a billing address',
     'checkout_success_title'   => 'Thank you for your order!',
     'payment_index'            => 'Please Pay',
-    'payment_please_pay'       => 'Order placed successfully, please pay',
+    'payment_please_pay'       => 'Order placed successfully',
     'payment_order_number'     => 'Order Number',
     'payment_amounts_payable'  => 'Amount',
     'payment_payment_method'   => 'Payment Method',

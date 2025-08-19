@@ -12,5 +12,5 @@ return [
     'invalid_order'      => 'Invalid order',
     'confirm_order'      => 'Customer confirm received package',
     'cancel_order'       => 'Customer cancel the order',
-    'order_already_paid' => 'The order already has been paid',
+    'order_already_confirmed' => 'The order already has been confirmed',
 ];

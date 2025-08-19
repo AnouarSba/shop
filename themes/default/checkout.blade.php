@@ -38,24 +38,7 @@
 
             @include('checkout._address')
 
-            <div class="checkout-black">
-              <h5 class="checkout-title">{{ __('shop/checkout.payment_method') }}</h5>
-              <div class="radio-line-wrap" id="payment-methods-wrap">
-                @foreach ($payment_methods as $payment)
-                  <div class="radio-line-item {{ $payment['code'] == $current['payment_method_code'] ? 'active' : '' }}" data-key="payment_method_code" data-value="{{ $payment['code'] }}">
-                    <div class="left">
-                      <span class="radio"></span>
-                      <img src="{{ $payment['icon'] }}" class="img-fluid">
-                    </div>
-                    <div class="right ms-2">
-                      <div class="title">{{ $payment['name'] }}</div>
-                      <div class="sub-title">{!! $payment['description'] !!}</div>
-                    </div>
-                  </div>
-                @endforeach
-              </div>
-            </div>
-
+            
             @if ($shipping_require)
               @hookwrapper('checkout.shipping_method')
               <div class="checkout-black">

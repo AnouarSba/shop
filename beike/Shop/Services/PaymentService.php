@@ -32,8 +32,8 @@ class PaymentService
         if (empty($this->order)) {
             throw new \Exception(trans('shop/order.invalid_order'));
         }
-        if ($this->order->status != 'unpaid') {
-            throw new \Exception(trans('shop/order.order_already_paid'));
+        if ($this->order->status != 'unconfirmed') {
+            throw new \Exception(trans('shop/order.order_already_confirmed'));
         }
         $this->orderId           = (int) $this->order->id;
         $this->paymentMethodCode = $this->order->payment_method_code;

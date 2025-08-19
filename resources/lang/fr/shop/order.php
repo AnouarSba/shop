@@ -12,5 +12,5 @@ return [
     'invalid_order'      => 'commande invalide',
     'confirm_order'      => 'L\'utilisateur confirme la réception',
     'cancel_order'       => 'L\'utilisateur annule la commande',
-    'order_already_paid' => 'commande payée',
+    'order_already_confirmed' => 'commande confirmée',
 ];

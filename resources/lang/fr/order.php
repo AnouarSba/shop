@@ -28,7 +28,7 @@ return [
     'order_comment'      => 'Remarque du client',
     'order_shipments'    => 'informations sur l\'expédition',
     'order_status'       => 'Statut de la commande',
-    'paid'               => 'Payé',
+    'confirmed'               => 'Confirmé',
     'payment_address'    => 'Adresse de facturation',
     'payment_method'     => 'mode de paiement',
     'product_info'       => 'Information produit',
@@ -44,6 +44,6 @@ return [
     'submit_status'      => 'état de mise à jour',
     'telephone'          => 'numéro de contact',
     'total'              => 'commande totale',
-    'unpaid'             => 'Être payé',
+    'unconfirmed'             => 'Être confirmé',
     'updated_at'         => 'temps de mise à jour',
 ];

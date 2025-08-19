@@ -246,14 +246,6 @@ return [
     ],
 
     'free_plugin_codes' => [
-        'bestseller',
         'flat_shipping',
-        'latest_products',
-        'openai',
-        'paypal',
-        'social',
-        'stripe',
-        'wintopay',
-        'youdao'
     ],
 ];

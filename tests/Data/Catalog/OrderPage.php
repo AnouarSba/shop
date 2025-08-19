@@ -13,8 +13,8 @@ class OrderPage
     ];
 
     public const Order_Status = [
-        'Unpaid'    => 'Unpaid', //待支付
-        'Paid'      => 'Paid', //已支付
+        'unconfirmed'    => 'unconfirmed', //待支付
+        'confirmed'      => 'confirmed', //已支付
         'Shipped'   => 'Shipped', //已发货
         'Completed' => 'Completed', //已完成  Cancelled
         'Cancelled' => 'Cancelled', //已完成  Cancelled

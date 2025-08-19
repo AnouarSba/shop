@@ -95,7 +95,7 @@ class PaypalOrderTest extends DuskTestCase
             // 切换回主窗口
             $browser->driver->switchTo()->window($mainWindowHandle);
             $browser->pause(5000)
-                ->assertSeeIn(OrderPage::Get_Order_Status['status_text'], OrderPage::Order_Status['Paid']);
+                ->assertSeeIn(OrderPage::Get_Order_Status['status_text'], OrderPage::Order_Status['confirmed']);
 
         });
     }

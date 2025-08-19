@@ -8,7 +8,7 @@ class CheckoutPage
         'url'    => '/checkout', //
         'submit' => '#submit-checkout', //提交按钮
         //订单成功验证信息
-        'assert' => 'Order placed successfully, please pay',
+        'assert' => 'Order placed successfully',
         //订单号
         'order_num'         => '.fw-bold',
         'product_price'     => '.price.text-end',

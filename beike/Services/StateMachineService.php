@@ -32,9 +32,9 @@ class StateMachineService
 
     public const CREATED = 'created';                  // 已创建
 
-    public const UNPAID = 'unpaid';                    // 待支付
+    public const unconfirmed = 'unconfirmed';                    // 待支付
 
-    public const PAID = 'paid';                        // 已支付
+    public const confirmed = 'confirmed';                        // 已支付
 
     public const SHIPPED = 'shipped';                  // 已发货
 
@@ -44,8 +44,8 @@ class StateMachineService
 
     public const ORDER_STATUS = [
         self::CREATED,
-        self::UNPAID,
-        self::PAID,
+        self::unconfirmed,
+        self::confirmed,
         self::SHIPPED,
         self::COMPLETED,
         self::CANCELLED,
@@ -53,13 +53,13 @@ class StateMachineService
 
     public const MACHINES = [
         self::CREATED => [
-            self::UNPAID => ['updateStatus', 'addHistory', 'notifyNewOrder'],
+            self::unconfirmed => ['updateStatus', 'addHistory', 'notifyNewOrder'],
         ],
-        self::UNPAID  => [
-            self::PAID      => ['updateStatus', 'addHistory', 'updateSales', 'subStock', 'notifyUpdateOrder'],
+        self::unconfirmed  => [
+            self::confirmed      => ['updateStatus', 'addHistory', 'updateSales', 'subStock', 'notifyUpdateOrder'],
             self::CANCELLED => ['updateStatus', 'addHistory', 'notifyUpdateOrder'],
         ],
-        self::PAID    => [
+        self::confirmed    => [
             self::CANCELLED => ['updateStatus', 'addHistory', 'notifyUpdateOrder'],
             self::SHIPPED   => ['updateStatus', 'addHistory', 'addShipment', 'notifyUpdateOrder'],
             self::COMPLETED => ['updateStatus', 'addHistory', 'notifyUpdateOrder'],
@@ -160,7 +160,7 @@ class StateMachineService
     public static function getValidStatuses(): array
     {
         $statuses = [
-            self::PAID,
+            self::confirmed,
             self::SHIPPED,
             self::COMPLETED,
         ];
@@ -229,7 +229,7 @@ class StateMachineService
 
         hook_filter('service.state_machine.change_status.after', ['order' => $order, 'status' => $status, 'comment' => $comment, 'notify' => $notify]);
 
-        if (! $order->shipping_method_code && $status == self::PAID) {
+        if (! $order->shipping_method_code && $status == self::confirmed) {
             $this->changeStatus(self::COMPLETED, $comment, $notify);
         }
     }

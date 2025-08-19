@@ -11,6 +11,6 @@ return [
     'index'        => 'مدونة الأخبار',
     'author'       => 'مؤلف',
     'views'        => 'عرض الرقم',
-    'created_at'   => 'وقت الافراج',
+    'created_at'   => 'بتاريخ',
     'text_summary' => 'ملخص',
 ];

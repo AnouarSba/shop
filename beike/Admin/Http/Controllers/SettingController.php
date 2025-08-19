@@ -34,7 +34,7 @@ class SettingController extends Controller
 
         $taxAddress = [
             ['value' => 'shipping', 'label' => trans('admin/setting.shipping_address')],
-            ['value' => 'payment', 'label' => trans('admin/setting.payment_address')],
+            // ['value' => 'payment', 'label' => trans('admin/setting.payment_address')],
         ];
 
         $data = [

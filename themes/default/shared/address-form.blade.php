@@ -8,7 +8,7 @@
             <el-input v-model="form.name" placeholder="{{ __('address.name') }}"></el-input>
           </el-form-item>
           @if (!current_customer())
-          <el-form-item label="{{ __('common.email') }}" prop="email" v-if="type == 'guest_shipping_address'" class="w-50 ms-3">
+          <el-form-item label="{{ __('common.email') }}" v-if="type == 'guest_shipping_address'" class="w-50 ms-3">
             <el-input v-model="form.email" placeholder="{{ __('common.email') }}"></el-input>
           </el-form-item>
           @else
@@ -18,9 +18,14 @@
           @endif
         </div>
         @if (!current_customer())
-        <el-form-item label="{{ __('address.address_1') }}" prop="address_1">
-          <el-input v-model="form.address_1" placeholder="{{ __('address.address_1') }}"></el-input>
-        </el-form-item>
+        <div class="d-flex">
+          <el-form-item label="{{ __('address.phone') }}" class="w-50" prop="phone" >
+            <el-input v-model="form.phone" placeholder="{{ __('address.phone') }}"></el-input>
+          </el-form-item>
+          <el-form-item label="{{ __('address.address_1') }}" class="w-50 ms-3" prop="address_1">
+            <el-input v-model="form.address_1" placeholder="{{ __('address.address_1') }}"></el-input>
+          </el-form-item>
+        </div>
         @endif
         <div class="d-flex">
           <el-form-item label="{{ __('address.address_2') }}" class="w-50">
@@ -30,14 +35,7 @@
             <el-input v-model="form.zipcode" placeholder="{{ __('address.post_code') }}"></el-input>
           </el-form-item>
         </div>
-        <div class="d-flex dialog-address">
-          <el-form-item label="{{ __('address.phone') }}" class="w-50">
-            <el-input maxlength="11" v-model="form.phone" type="number" placeholder="{{ __('address.phone') }}"></el-input>
-          </el-form-item>
-          <el-form-item prop="city" label="{{ __('shop/account/addresses.enter_city') }}" required class="w-50 ms-3">
-            <el-input v-model="form.city" placeholder="{{ __('shop/account/addresses.enter_city') }}"></el-input>
-          </el-form-item>
-        </div>
+        
         <div class="d-flex">
           <el-form-item label="{{ __('address.country') }}" required class="w-50">
             <el-select v-model="form.country_id" class="w-100" filterable placeholder="{{ __('address.country_id') }}" @change="countryChange">
@@ -52,6 +50,12 @@
                 :value="item.id">
               </el-option>
             </el-select>
+          </el-form-item>
+        </div>
+        <div class="d-flex dialog-address">
+          
+          <el-form-item prop="city" label="{{ __('shop/account/addresses.enter_city') }}" required class="w-50 ">
+            <el-input v-model="form.city" placeholder="{{ __('shop/account/addresses.enter_city') }}"></el-input>
           </el-form-item>
         </div>
         <el-form-item label="" v-if="source.isLogin">
@@ -105,6 +109,16 @@
           message: '{{ __('shop/login.enter_email') }}',
           trigger: 'blur'
         }, ],
+        phone: [{
+          required: true,
+          message: '{{ __('shop/login.enter_phone') }}',
+          trigger: 'blur'
+        },
+          {
+            pattern: /^0(5|6|7)[0-9]{8}$/,
+            message: '{{ __('shop/login.invalid_phone') }}',
+            trigger: 'blur'
+          } ],
         address_1: [{
           required: true,
           message: ' {{ __('shop/account/addresses.enter_address') }}',

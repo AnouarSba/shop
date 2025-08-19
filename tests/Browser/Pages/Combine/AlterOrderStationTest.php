@@ -94,7 +94,7 @@ class AlterOrderStationTest extends DuskTestCase
                 ->press(AdminOrderPage::Details['pull_btn'])
             //修改状态为已支付
                 ->pause(2000)
-                ->click(AdminOrderPage::Details['paid'])
+                ->click(AdminOrderPage::Details['confirmed'])
                 ->press(AdminOrderPage::Details['alter_btn'])
                 ->pause(3000)
             //切换到前台
@@ -104,7 +104,7 @@ class AlterOrderStationTest extends DuskTestCase
                 ->refresh()
                 ->pause(1000)
             // 断言是否已支付
-                ->assertSeeIn(OrderPage::Get_Order_Status['status_text'], OrderPage::Order_Status['Paid'])
+                ->assertSeeIn(OrderPage::Get_Order_Status['status_text'], OrderPage::Order_Status['confirmed'])
             //切换到后台，将状态改为已发货
                 ->driver->switchTo()->window($browser->driver->getWindowHandles()[0]);
             $browser->pause(2000)

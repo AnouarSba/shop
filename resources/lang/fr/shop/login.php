@@ -21,6 +21,8 @@ return [
     'email_or_password_error' => 'Erreur de courriel ou de mot de passe!',
     'empty_customer'          => 'L\'utilisateur n\'a pas été trouvé',
     'enter_email'             => 'merci d\'entrer votre email',
+    'enter_phone'             => 'merci d\'entrer votre phone',
+    'invalid_phone'             => 'Veuillez entrer un numéro de téléphone valide',
     'enter_password'          => 'Veuillez entrer le mot de passe',
     'forget_password'         => 'Mot de passe oublié',
     'home'                    => 'page de garde',

@@ -1096,7 +1096,7 @@ class ZonesSeeder extends Seeder
             ["id" => 1054, "country_id" => 67, "name" => "Harjumaa (Tallinn)", "code" => "HA", "sort_order" => 0, "status" => 1,],
             ["id" => 1055, "country_id" => 67, "name" => "Hiiumaa (Kardla)", "code" => "HI", "sort_order" => 0, "status" => 1,],
             ["id" => 1056, "country_id" => 67, "name" => "Ida-Virumaa (Johvi)", "code" => "IV", "sort_order" => 0, "status" => 1,],
-            ["id" => 1057, "country_id" => 67, "name" => "Jarvamaa (Paide)", "code" => "JA", "sort_order" => 0, "status" => 1,],
+            ["id" => 1057, "country_id" => 67, "name" => "Jarvamaa (confirmede)", "code" => "JA", "sort_order" => 0, "status" => 1,],
             ["id" => 1058, "country_id" => 67, "name" => "Jogevamaa (Jogeva)", "code" => "JO", "sort_order" => 0, "status" => 1,],
             ["id" => 1059, "country_id" => 67, "name" => "Laane-Virumaa (Rakvere)", "code" => "LV", "sort_order" => 0, "status" => 1,],
             ["id" => 1060, "country_id" => 67, "name" => "Laanemaa (Haapsalu)", "code" => "LA", "sort_order" => 0, "status" => 1,],

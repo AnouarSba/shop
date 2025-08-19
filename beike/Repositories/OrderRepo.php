@@ -216,10 +216,14 @@ class OrderRepo
             $shippingAddress = $shippingAddressId ? Address::query()->findOrFail($shippingAddressId) : new Address();
             $paymentAddress  = Address::query()->findOrFail($paymentAddressId);
             $email           = $customer->email;
+            $phone           = $customer->phone;
+            $customer_name           = $customer->name;
         } else {
             $shippingAddress = new Address($current['guest_shipping_address'] ?? []);
             $paymentAddress  = new Address($current['guest_payment_address'] ?? []);
+            $customer_name           = $current['guest_shipping_address']['name'] ?? '';
             $email           = $current['guest_shipping_address']['email'] ?? '';
+            $phone           = $current['guest_shipping_address']['phone'] ?? '';
         }
         $shippingAddress->country_name = $shippingAddress->country->name ?? '';
         $shippingAddress->country_id   = $shippingAddress->country->id   ?? 0;
@@ -235,6 +239,7 @@ class OrderRepo
         $currencyCode  = current_currency_code();
         $currency      = CurrencyRepo::findByCode($currencyCode);
         $currencyValue = $currency->value ?? 1;
+       
 
         $order = new Order([
             'number'                 => self::generateOrderNumber(),
@@ -244,6 +249,7 @@ class OrderRepo
             'payment_address_id'     => $paymentAddress->id          ?? 0,
             'customer_name'          => $customer->name              ?? '',
             'email'                  => $email,
+            'phone'                  => $phone,
             'calling_code'           => $customer->calling_code ?? 0,
             'telephone'              => $customer->telephone    ?? '',
             'total'                  => $orderTotal['amount'],

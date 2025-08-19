@@ -52,13 +52,13 @@ class ProcessOrder extends Command
 
         $this->logInfo("Min Datetime: $minDatetime");
 
-        $unpaidOrders = OrderRepo::getListBuilder(['status' => StateMachineService::UNPAID])
+        $unconfirmedOrders = OrderRepo::getListBuilder(['status' => StateMachineService::unconfirmed])
             ->where('created_at', '<', $minDatetime)
             ->orderBy('created_at')
             ->get();
 
-        $orderTotal = $unpaidOrders->count();
-        foreach ($unpaidOrders as $index => $order) {
+        $orderTotal = $unconfirmedOrders->count();
+        foreach ($unconfirmedOrders as $index => $order) {
             $count = $index + 1;
             $this->logInfo(" $count/$orderTotal: ID:$order->id - Number: $order->number - $order->created_at");
             (new StateMachineService($order))->changeStatus(StateMachineService::CANCELLED);
@@ -83,12 +83,12 @@ class ProcessOrder extends Command
 
         $this->logInfo("Min Datetime: $minDatetime");
 
-        $unpaidOrders = OrderRepo::getListBuilder(['status' => StateMachineService::SHIPPED])
+        $unconfirmedOrders = OrderRepo::getListBuilder(['status' => StateMachineService::SHIPPED])
             ->orderBy('created_at')
             ->get();
 
-        $orderTotal = $unpaidOrders->count();
-        foreach ($unpaidOrders as $index => $order) {
+        $orderTotal = $unconfirmedOrders->count();
+        foreach ($unconfirmedOrders as $index => $order) {
             $count = $index + 1;
             $this->logInfo(" $count/$orderTotal: ID:$order->id - Number: $order->number - $order->created_at");
 

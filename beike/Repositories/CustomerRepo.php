@@ -28,6 +28,7 @@ class CustomerRepo
     public static function create($customerData): Customer
     {
         $customerData['email']    = $customerData['email'] ?? '';
+        $customerData['phone']    = $customerData['phone'] ?? '';
         $customerData['password'] = Hash::make($customerData['password'] ?? '');
 
         return Customer::query()->create($customerData);
@@ -45,6 +46,7 @@ class CustomerRepo
         }
         if (isset($data['password'])) {
             $data['password'] = Hash::make($data['password']);
+            $data['phone'] = $data['phone'];
         }
 
         return $customer->update($data);
@@ -123,6 +125,10 @@ class CustomerRepo
         }
         if (isset($filters['email'])) {
             $builder->where('customers.email', 'like', "%{$filters['email']}%");
+        }
+        
+        if (isset($filters['phone'])) {
+            $builder->where('customers.phone', 'like', "%{$filters['phone']}%");
         }
         if (isset($filters['status'])) {
             $builder->where('customers.active', (int) $filters['status']);

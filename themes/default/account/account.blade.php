@@ -24,9 +24,9 @@
           </div>
           <div class="card-body">
             <div class="d-flex flex-nowrap card-items mb-4 py-3">
-              <a href="{{ shop_route('account.order.index', ['status' => 'unpaid']) }}" class="d-flex flex-column align-items-center"><i class="iconfont">&#xf12f;</i><span
-                  class="text-muted text-center">{{ __('order.unpaid') }}</span></a>
-              <a href="{{ shop_route('account.order.index', ['status' => 'paid']) }}" class="d-flex flex-column align-items-center"><i class="iconfont">&#xf130;</i><span
+              <a href="{{ shop_route('account.order.index', ['status' => 'unconfirmed']) }}" class="d-flex flex-column align-items-center"><i class="iconfont">&#xf12f;</i><span
+                  class="text-muted text-center">{{ __('order.unconfirmed') }}</span></a>
+              <a href="{{ shop_route('account.order.index', ['status' => 'confirmed']) }}" class="d-flex flex-column align-items-center"><i class="iconfont">&#xf130;</i><span
                   class="text-muted text-center">{{ __('shop/account.pending_send') }}</span></a>
               <a href="{{ shop_route('account.order.index', ['status' => 'shipped']) }}" class="d-flex flex-column align-items-center"><i class="iconfont">&#xf131;</i><span
                   class="text-muted text-center">{{ __('shop/account.pending_receipt') }}</span></a>

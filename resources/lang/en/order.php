@@ -44,8 +44,8 @@ return [
     'history_comment'    => 'Comment',
     'history_created_at' => 'Created At',
 
-    'unpaid'             => 'Unpaid',
-    'paid'               => 'Paid',
+    'unconfirmed'             => 'unconfirmed',
+    'confirmed'               => 'confirmed',
     'shipped'            => 'Shipped',
     'completed'          => 'Completed',
     'cancelled'          => 'Cancelled',

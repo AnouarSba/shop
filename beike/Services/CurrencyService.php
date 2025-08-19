@@ -113,7 +113,7 @@ class CurrencyService
             sprintf(
                 'https://v6.exchangerate-api.com/v6/%s/latest/%s',
                 system_setting('base.rate_api_key'),
-                system_setting('base.currency', 'USD')
+                system_setting('base.currency', 'DA')
             )
         )->json();
         $rates = $data['conversion_rates'] ?? [];

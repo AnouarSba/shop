@@ -21,6 +21,8 @@ return [
     'email_or_password_error' => 'Email or Password is incorrect!',
     'empty_customer'          => 'The user could not be found',
     'enter_email'             => 'Please input your email',
+    'enter_phone'             => 'Please input your phone',
+    'invalid_phone'             => 'Please enter a valid phone number',
     'enter_password'          => 'Please enter password',
     'forget_password'         => 'Forget password',
     'home'                    => 'Home',

@@ -1,6 +1,6 @@
 <div id="checkout-address-app" v-cloak>
   <div class="checkout-black" v-if="shippingRequired">
-    <div class="checkout-title">
+    <!-- <div class="checkout-title">
       <div class="d-flex">
         <h5 class="mb-0 me-4">{{ __('shop/checkout.address') }}</h5>
         <el-checkbox v-model="same_as_shipping_address" v-if="source.addresses.length || source.guest_shipping_address">{{ __('shop/checkout.same_as_shipping_address') }}
@@ -8,7 +8,7 @@
       </div>
       <button class="btn btn-sm icon" v-if="isAllAddress" @click="isAllAddress = false"><i
           class="bi bi-x-lg"></i></button>
-    </div>
+    </div> -->
     <div class="addresses-wrap">
       <div class="row">
         <template v-if="source.isLogin">

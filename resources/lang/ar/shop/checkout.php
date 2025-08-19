@@ -30,7 +30,7 @@ return [
     'error_payment_address'    => 'الرجاء تحديد عنوان الفواتير',
     'checkout_success_title'   => 'شكرا لك على طلبك!',
     'payment_index'            => 'من فضلك دفع',
-    'payment_please_pay'       => 'تم وضع الطلب بنجاح ، يرجى الدفع',
+    'payment_please_pay'       => 'تم وضع الطلب بنجاح',
     'payment_order_number'     => 'رقم الطلب',
     'payment_amounts_payable'  => 'كمية',
     'payment_payment_method'   => 'طريقة الدفع',

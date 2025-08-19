@@ -23,8 +23,8 @@ class AdminOrderPage
 
     public const Details = [//订单详情页
         'pull_btn' => '#app > form > div.el-form-item.is-required > div > div > div > span > span > i', //状态栏下拉按钮
-        //    "paid"=>".el-select-dropdown__item",//已支付
-        'paid'        => '.el-scrollbar__view.el-select-dropdown__list li:nth-child(1)', //已支付
+        //    "confirmed"=>".el-select-dropdown__item",//已支付
+        'confirmed'        => '.el-scrollbar__view.el-select-dropdown__list li:nth-child(1)', //已支付
         'cancel'      => '.el-scrollbar__view.el-select-dropdown__list li:nth-child(2)', //已取消
         'alter_btn'   => '.el-button.el-button--primary', //更新状态按钮
         'Shipped'     => '.el-scrollbar__view.el-select-dropdown__list li:nth-of-type(2)', //已发货

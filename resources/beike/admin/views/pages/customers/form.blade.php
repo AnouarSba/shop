@@ -15,6 +15,9 @@
               <el-form-item label="{{ __('common.email') }}" prop="email">
                 <el-input v-model="form.email" placeholder="{{ __('common.email') }}"></el-input>
               </el-form-item>
+              <el-form-item label="{{ __('common.phone') }}" prop="phone">
+                <el-input v-model="form.phone" placeholder="{{ __('common.phone') }}"></el-input>
+              </el-form-item>
               <el-form-item label="{{ __('shop/login.password') }}" prop="password">
                 <el-input v-model="form.password" placeholder="{{ __('admin/customer.password_info') }}"></el-input>
               </el-form-item>
@@ -148,6 +151,7 @@
           id: @json($customer['id'] ?? null),
           name: @json($customer['name']),
           email: @json($customer['email']),
+          phone: @json($customer['phone']),
           password: '',
           customer_group_id: @json($customer['customer_group_id']),
           active: @json($customer['active']),
@@ -184,6 +188,9 @@
           email: [
             {required: true, message: '{{ __('common.error_required', ['name' => __('common.email')] ) }}', trigger: 'blur'},
             {type: 'email', message: '{{ __('common.error_required', ['name' => __('admin/customer.error_email')] ) }}' ,trigger: 'blur'},
+          ],
+          phone: [
+            {required: true, message: '{{ __('common.error_required', ['name' => __('common.email')] ) }}', trigger: 'blur'},
           ],
         },
 

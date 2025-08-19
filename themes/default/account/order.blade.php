@@ -48,7 +48,7 @@
                             <td rowspan="{{ $loop->count }}">{{$order->status_format}}</td>
                             <td rowspan="{{ $loop->count }}" class="text-end">
                               <a href="{{ shop_route('account.order.show', ['number' => $order->number]) }}" class="btn btn-outline-secondary btn-sm mb-2 w-100">{{ __('shop/account/order.check') }}</a>
-                              @if ($order->status == 'unpaid')
+                              @if ($order->status == 'unconfirmed')
                                 <a href="{{ shop_route('orders.pay', $order->number) }}" class="btn w-100 btn-primary btn-sm nowrap mb-2">{{ __('shop/account/order_info.to_pay') }}</a>
                                 <button class="btn btn-outline-danger btn-sm cancel-order w-100" data-number="{{ $order->number }}" type="button">{{ __('shop/account/order_info.cancel') }}</button>
                               @endif
@@ -99,7 +99,7 @@
                     <div class="fw-bold">{{ __('admin/order.total') }}：<span class="amount text-primary">{{ currency_format($order->total, $order->currency_code, $order->currency_value) }}</span></div>
                   </div>
                   <div class="footer-btns d-flex justify-content-end mt-2">
-                    @if ($order->status == 'unpaid')
+                    @if ($order->status == 'unconfirmed')
                       <a href="{{ shop_route('orders.pay', $order->number) }}" class="btn btn-primary btn-sm nowrap">{{ __('shop/account/order_info.to_pay') }}</a>
                       <button class="btn btn-outline-danger ms-2 btn-sm cancel-order" data-number="{{ $order->number }}" type="button">{{ __('shop/account/order_info.cancel') }}</button>
                     @endif
