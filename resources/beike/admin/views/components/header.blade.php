@@ -56,7 +56,7 @@
       <ul class="navbar navbar-right">
         @hook('admin.header.navbar.before')
 <!-- 
-        <div class="alert alert-warning mb-0 warning-copyright {{ check_license() ? 'd-none' : '' }}">
+        <div class=" ggg alert alert-warning mb-0 warning-copyright {{ check_license() ? 'd-none' : '' }}">
           <i class="bi bi-exclamation-triangle-fill"></i> {!! __('admin/common.copyright_hint_text') !!}
         </div> -->
 

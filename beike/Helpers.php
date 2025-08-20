@@ -812,8 +812,6 @@ function clean_domain($domain): string
 }
 
 /**
- * Check domain ha license.
- * 删除版权信息, 请先购买授权 https://beikeshop.com/vip/subscription
  *
  * @return bool
  * @throws Exception

@@ -2,9 +2,7 @@
 /**
  * Weight.php
  *
- * @copyright  2023 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     TL <mengwb@guangda.work>
+ 
  * @created    2023-03-21 16:29:54
  * @modified   2023-03-21 16:29:54
  */

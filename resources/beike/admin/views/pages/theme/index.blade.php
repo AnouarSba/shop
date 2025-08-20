@@ -39,7 +39,7 @@
       <input class="form-check-input" type="checkbox" id="theme-demo-data" value="">
       <label class="form-check-label" for="theme-demo-data">{{ __('admin/theme.theme_pop_checkbox') }}</label>
     </div>
-    <div class="text-danger"><i class="bi bi-exclamation-triangle-fill"></i> {{ __('admin/theme.theme_pop_text') }}</div>
+    <!-- <div class="text-danger"><i class="bi bi-exclamation-triangle-fill"></i> {{ __('admin/theme.theme_pop_text') }}</div> -->
     <div class="d-flex justify-content-end mt-3">
       <button class="btn btn-primary theme-config-btn">{{ __('common.confirm') }}</button>
     </div>

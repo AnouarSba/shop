@@ -2,9 +2,7 @@
 /**
  * FlattenCategoryRepo.php
  *
- * @copyright  2024 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
- * @author     Edward Yang <yangjin@guangda.work>
+
  * @created    2024-01-24 16:00:54
  * @modified   2024-01-24 16:00:54
  */
