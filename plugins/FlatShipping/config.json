@@ -1,0 +1,20 @@
+{
+    "code": "flat_shipping",
+    "name": {
+        "fr": "Kazi Tour",
+        "ar": "Kazi Tour",
+        "en": "Kazi Tour"
+    },
+    "description": {
+        "fr": "Transport Gratuit",
+        "ar": "按订单总额收取固定运费",
+        "en": "النقل مجاني"
+    },
+    "type": "shipping",
+    "version": "v1.0.0",
+    "icon": "/image/logo.png",
+    "author": {
+        "name": "",
+        "email": ""
+    }
+}
