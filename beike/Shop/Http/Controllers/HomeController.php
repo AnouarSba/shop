@@ -95,7 +95,7 @@ $categories = Brand::orderBy('sort_order')->wher('status', 1)->get()->map(functi
             $product->name_format = optional(
                 $product->descriptions->where('locale', app()->getLocale())->first()
             )->name ?? '';
-            $product->price_format = optional($product->skus->first())->price ?? 0;
+            $product->price_format = currency_format(optional($product->skus->first())->price ?? 0);
             return $product;
         });
 
