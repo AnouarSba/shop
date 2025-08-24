@@ -24,7 +24,7 @@ return [
     'welcome'      => [
         'template_title'   => 'Welcome',
         'title'            => 'Welcome',
-        'describe'         => 'Welcome to install BeikeShop. Easy Installation and Setup Wizard.',
+        'describe'         => 'Welcome to install RacimeLine. Easy Installation and Setup Wizard.',
         'message'          => 'Easy Installation and Setup Wizard.',
         'next'             => 'Check Requirements',
         'copyright_btn'    => 'I have read the agreement and agree',
@@ -33,7 +33,7 @@ return [
         'copyright_list_2' => '2. Any individual or organization can not be allowed to sell or lease this system and its derivatives without our explicit written authorization.',
         'copyright_list_3' => '3. Please keep the copyright information, and please contact us if you wanna remove it.',
         'statement_1'      => 'Disclaimer:',
-        'statement_2'      => 'Risk statement: The use and installation of the BeikeShop system is based on your own decision. We are not responsible for any losses, damages, or legal liabilities that may arise from the use of this system',
+        'statement_2'      => 'Risk statement: The use and installation of the RacimeLine system is based on your own decision. We are not responsible for any losses, damages, or legal liabilities that may arise from the use of this system',
         'statement_3'      => 'Legal compliance: When using this website system, you agree not to engage in any illegal, infringing or violating local laws and regulations in business activities. We do not assume any responsibility for your business behavior',
         'statement_4'      => 'Data loss and hacker attacks: Although we have taken reasonable security measures to protect the data and security of the system, the risk of information transmission loss and hacker attacks still exists. We are not responsible for data loss, hacker attacks, or other security incidents in the system. You are responsible for taking measures to protect data and system security on your own',
     ],
@@ -137,7 +137,7 @@ return [
         'finished'       => 'Congratulations, the system is successfully installed, let\'s experience it now',
         'to_front'       => 'Shop',
         'to_admin'       => 'Admin Panel',
-        'nginx_alert' => 'Nginx server needs to configure pseudo-static rules, click <a href="https://docs.beikeshop.com/install/source.html#nginx" target="_blank">View configuration method</a>',
+        'nginx_alert' => 'Nginx server needs to configure pseudo-static rules, click <a href="https://docs.RacimeLine.com/install/source.html#nginx" target="_blank">View configuration method</a>',
     ],
 
     /*

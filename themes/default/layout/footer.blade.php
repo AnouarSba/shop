@@ -93,7 +93,7 @@
         <div class="col">
           <div class="d-flex flex-wrap">
             @if(!check_license())
-              Powered By&nbsp;<a hidden href="https://beikeshop.com/" target="_blank" rel="noopener">BeikeShop</a>&nbsp;-&nbsp;
+              Powered By&nbsp;<a hidden href="https://RacimeLine.com/" target="_blank" rel="noopener">RacimeLine</a>&nbsp;-&nbsp;
             @endif
             {!! $footer_content['bottom']['copyright'][locale()] ?? '' !!}
           </div>

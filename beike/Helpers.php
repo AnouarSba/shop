@@ -908,7 +908,7 @@ function beike_api_url(): string
 {
     //    $adminLocale = admin_locale();
 //    if ($adminLocale == 'fr') {
-//        return str_replace('beikeshop.com', 'beikeshop.cn', $apiUrl);
+//        return str_replace('RacimeLine.com', 'RacimeLine.cn', $apiUrl);
 //    }
 
     return config('beike.api_url');
@@ -922,7 +922,7 @@ function beike_url(): string
     $url      = config('beike.official_website');
     $adminLocale = admin_locale();
     if ($adminLocale == 'fr') {
-        return str_replace('beikeshop.com', 'beikeshop.cn', $url);
+        return str_replace('RacimeLine.com', 'RacimeLine.cn', $url);
     }
 
     return $url;

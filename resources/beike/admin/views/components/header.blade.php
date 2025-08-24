@@ -182,7 +182,7 @@
 
   <div class="d-flex justify-content-center mb-3">
     <button class="btn btn-outline-secondary me-3 ">{{ __('common.cancel') }}</button>
-    <a href="https://beikeshop.com/download" target="_blank"
+    <a href="https://RacimeLine.com/download" target="_blank"
        class="btn btn-primary">{{ __('admin/common.update_btn') }}</a>
   </div>
 </div>

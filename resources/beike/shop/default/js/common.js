@@ -1,6 +1,6 @@
 /*
- * @copyright     2022 beikeshop.com - All Rights Reserved.
- * @link          https://beikeshop.com
+ * @copyright     2022 RacimeLine.com - All Rights Reserved.
+ * @link          https://RacimeLine.com
  * @Author        pu shuo <pushuo@guangda.work>
  * @Date          2022-09-09 19:16:39
  * @LastEditTime  2024-01-14 19:23:10

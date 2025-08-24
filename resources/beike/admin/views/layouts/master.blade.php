@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="{{ image_origin(system_setting('base.favicon')) }}">
   <link href="{{ mix('build/beike/admin/css/app.css') }}" rel="stylesheet">
   <script src="{{ mix('build/beike/admin/js/app.js') }}"></script>
-  <title>BeikeShop - @yield('title')</title>
+  <title>RacimeLine - @yield('title')</title>
   @stack('header')
 
   <script>
@@ -60,7 +60,7 @@
         </div>
 
         <!-- <p class="text-center text-secondary mt-5" id="copyright-text">
-            <a href="https://beikeshop.com/" class="ms-2" target="_blank">BeikeShop</a>
+            <a href="https://RacimeLine.com/" class="ms-2" target="_blank">RacimeLine</a>
             v{{ config('beike.version') }}({{ config('beike.build') }})
             &copy; {{ date('Y') }} All Rights Reserved</p> -->
 

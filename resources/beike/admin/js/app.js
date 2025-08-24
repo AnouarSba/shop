@@ -1,6 +1,6 @@
 /*
- * @copyright     2022 beikeshop.com - All Rights Reserved.
- * @link          https://beikeshop.com
+ * @copyright     2022 RacimeLine.com - All Rights Reserved.
+ * @link          https://RacimeLine.com
  * @Author        pu shuo <pushuo@guangda.work>
  * @Date          2022-08-26 18:18:22
  * @LastEditTime  2024-12-25 00:04:41
@@ -190,8 +190,8 @@ const checkRemoveCopyRight = () => {
     isRemove = true;
   }
 
-  // 被去除版权中 BeikeShop 文字
-  if ($('#copyright-text').text().indexOf('BeikeShop') === -1) {
+  // 被去除版权中 RacimeLine 文字
+  if ($('#copyright-text').text().indexOf('RacimeLine') === -1) {
     isRemove = true;
   }
 

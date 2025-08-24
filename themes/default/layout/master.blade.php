@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>@yield('title', system_setting('base.meta_title', 'BeikeShop开源好用的跨境电商系统'))</title>
+  <title>@yield('title', system_setting('base.meta_title', 'RacimeLine开源好用的跨境电商系统'))</title>
   <meta name="keywords" content="@yield('keywords', system_setting('base.meta_keywords'))">
   <meta name="description" content="@yield('description', system_setting('base.meta_description'))">
-  <meta name="generator" content="BeikeShop v{{ config('beike.version') }}({{ config('beike.build') }})">
+  <meta name="generator" content="RacimeLine v{{ config('beike.version') }}({{ config('beike.build') }})">
   <base href="{{ $shop_base_url }}">
   <link rel="stylesheet" type="text/css" href="{{ mix('/build/beike/shop/'.system_setting('base.theme').'/css/bootstrap.css') }}">
   <script src="{{ asset('vendor/jquery/jquery-3.6.0.min.js') }}"></script>
@@ -70,5 +70,5 @@
   @stack('add-scripts')
   @hook('layout.master.footer.code')
 </body>
-<!-- BeikeShop v{{ config('beike.version') }}({{ config('beike.build') }}) -->
+<!-- RacimeLine v{{ config('beike.version') }}({{ config('beike.build') }}) -->
 </html>

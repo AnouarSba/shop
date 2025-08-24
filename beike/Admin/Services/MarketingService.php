@@ -147,8 +147,8 @@ class MarketingService
         $pluginZip = storage_path('app/' . $pluginPath);
         $info = $this->getPluginInfo($pluginZip);
 
-        //是否beikeshop 插件
-        if ($info['is_beikeshop_plugin']) {
+        //是否RacimeLine 插件
+        if ($info['is_RacimeLine_plugin']) {
 
             try {
                 $zipFile   = (new Zip)->open($pluginZip);
@@ -185,13 +185,13 @@ class MarketingService
                     }
 
                 } else {
-                    $zipFile->extract(base_path('plugins')); //正常的beikeshop 插件
+                    $zipFile->extract(base_path('plugins')); //正常的RacimeLine 插件
                 }
             } catch (Exception $exception) {
                 throw new Exception($exception->getMessage());
             }
         } else {
-            throw new Exception('无法识别的beikeshop插件！');
+            throw new Exception('无法识别的RacimeLine插件！');
         }
 
     }
@@ -255,7 +255,7 @@ class MarketingService
         $configInfo          = [];
         $error_dir           = '';
         $is_error            = false;
-        $is_beikeshop_plugin = false;
+        $is_RacimeLine_plugin = false;
 
         $zip                 = new ZipArchive;
 
@@ -297,14 +297,14 @@ class MarketingService
                             $error_dir = rtrim($dirName, '/');
                         }
                     } else {
-                        $is_beikeshop_plugin = true;
+                        $is_RacimeLine_plugin = true;
                     }
                 }
 
             }
 
             if (count($dir_info) > 1 && $dir_info[0] == 'Plugin') {
-                $is_beikeshop_plugin = true;
+                $is_RacimeLine_plugin = true;
             }
 
             $zip->close();
@@ -313,7 +313,7 @@ class MarketingService
         }
 
         return [
-            'is_beikeshop_plugin' => $is_beikeshop_plugin,
+            'is_RacimeLine_plugin' => $is_RacimeLine_plugin,
             'is_error'            => $is_error,
             'error_dir'           => $error_dir,
             'dir_info'            => $dir_info,

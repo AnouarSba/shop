@@ -353,7 +353,7 @@ class Plugin implements \ArrayAccess, Arrayable
         if ($status == 'fail') {
             SettingRepo::update('plugin', $this->code, ['status' => false]);
 
-            throw new \Exception($license['message'] ?? '插件授权未知错误, 请联系 beikeshop.com');
+            throw new \Exception($license['message'] ?? '插件授权未知错误, 请联系 RacimeLine.com');
         }
 
         return $license['data']['has_license'] ?? false;

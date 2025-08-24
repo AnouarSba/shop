@@ -98,7 +98,7 @@ class EnvironmentManager
         $appUrl = $scheme . '://' . $_SERVER['HTTP_HOST'];
 
         $envFileData =
-            'APP_NAME=\'' . ($request->app_name ?: 'BeikeShop') . "'\n" .
+            'APP_NAME=\'' . ($request->app_name ?: 'RacimeLine') . "'\n" .
             'APP_ENV=' . $request->environment . "\n" .
             'APP_KEY=' . 'base64:' . base64_encode(Str::random(32)) . "\n" .
             'APP_DEBUG=false' . "\n" .

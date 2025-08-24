@@ -6,7 +6,7 @@ class AccountPage
 {
     public const Account = [
         'url'                 => '/account',
-        'go_index'            => '.logo', //beikeshop图标
+        'go_index'            => '.logo', //RacimeLine图标
         'go_account'          => '.list-group-item.d-flex.justify-content-between.align-items-center:nth-child(1)', //
         'go_Edit'             => '.list-group-item.d-flex.justify-content-between.align-items-center:nth-child(2)', //编辑信息
         'change_password'     => '.list-group-item.d-flex.justify-content-between.align-items-center:nth-child(3)', //修改密码

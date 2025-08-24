@@ -8,6 +8,6 @@
  */
 
 return [
-    'plugins_index' => 'Connectez-vous au backend de BeikeShop',
+    'plugins_index' => 'Connectez-vous au backend de RacimeLine',
     'log_in'        => 'Connexion',
 ];

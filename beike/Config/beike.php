@@ -8,8 +8,8 @@
  */
 
 return [
-    'api_url'          => env('BEIKE_API', 'https://api.beikeshop.com'),
-    'official_website' => env('BEIKE_OFFICIAL_WEBSITE', 'https://beikeshop.com'),
+    'api_url'          => env('BEIKE_API', 'https://api.RacimeLine.com'),
+    'official_website' => env('BEIKE_OFFICIAL_WEBSITE', 'https://RacimeLine.com'),
     'version'          => '1.5.6.9',
     'build'            => '20250508',
 

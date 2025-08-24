@@ -2,8 +2,8 @@
 /**
  * PaypalService.php
  *
- * @copyright  2023 beikeshop.com - All Rights Reserved
- * @link       https://beikeshop.com
+ * @copyright  2023 RacimeLine.com - All Rights Reserved
+ * @link       https://RacimeLine.com
  * @author     Edward Yang <yangjin@guangda.work>
  * @created    2023-08-22 11:49:51
  * @modified   2023-08-22 11:49:51

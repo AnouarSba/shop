@@ -15,5 +15,5 @@ return [
     'no'              => 'لا',
     'yes'             => 'نعم',
     'company_profile' => 'ملف تعريف الشركة',
-    'nginx_alert'     => 'يحتاج خادم Nginx إلى تكوين قواعد pseudo-static ، انقر فوق <a href = "https://docs.beikeshop.com/install/source.html#nginx" target = "_ Blank"> طريقة تكوين العرض </a>',
+    'nginx_alert'     => 'يحتاج خادم Nginx إلى تكوين قواعد pseudo-static ، انقر فوق <a href = "https://docs.RacimeLine.com/install/source.html#nginx" target = "_ Blank"> طريقة تكوين العرض </a>',
 ];

@@ -95,7 +95,7 @@ return [
     'countries_index'                        => 'Country/Region',
     'zones_index'                            => 'Zones',
     'update_nav'                             => 'Update',
-    'update_title'                           => 'Find a new version of BeikeShop, whether to update now',
+    'update_title'                           => 'Find a new version of RacimeLine, whether to update now',
     'update_new_version'                     => 'Latest version',
     'update_old_version'                     => 'Current version',
     'update_date'                            => 'Update date',
