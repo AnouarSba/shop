@@ -84,7 +84,7 @@ class HomeController extends Controller
 // });
 
 // Get all categories with products
-$categories = Brand::orderBy('sort_order')->wher('status', 1)->get()->map(function ($category) {
+$categories = Brand::orderBy('sort_order')->where('status', 1)->get()->map(function ($category) {
     $products = Product::with('description')
         ->with('skus')
         ->where('brand_id', $category->id)
