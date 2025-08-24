@@ -84,26 +84,29 @@ class HomeController extends Controller
 // });
 
 // Get all categories with products
-    $categories = Brand::all();  // Or use your query to retrieve categories
+$categories = Brand::all()->map(function ($category) {
+    $products = Product::with('description')
+        ->with('skus')
+        ->where('brand_id', $category->id)
+        ->orderBy('created_at', 'desc') // 👈 latest first
+        ->limit(4)   // 👈 make sure we LIMIT
+        ->get()
+        ->map(function ($product) {
+            $product->name_format = optional(
+                $product->descriptions->where('locale', app()->getLocale())->first()
+            )->name ?? '';
+            $product->price_format = optional($product->skus->first())->price ?? 0;
+            return $product;
+        });
 
-    $categories = $categories->map(function ($category) {
-    // Get products for the current category
-    $products = Product::with('description')->where('brand_id', $category->id)->get();
- 
-    $products->each(function ($product) {
-        if ($product->description) {
-            $product->setAttribute('name_format', $product->description['name']);
-            $product['price_format'] = currency_format($product->price);
-        } else {
-            $product->setAttribute('name_format', '');
-            $product->setAttribute('price_format', '');
-        }
-    });
     return [
-        'category'        => $category,  // Category data
-        'products'        => $products,  // Raw product data
+        'category' => $category,
+        'products' => $products,
     ];
 });
+
+$data['categories'] = $categories;
+
 
 // Optionally: You can convert the collection to an array
 // $categories = $categories->toArray();
