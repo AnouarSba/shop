@@ -24,7 +24,7 @@ class RegisterController extends Controller
 
     public function store(RegisterRequest $request)
     {
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('email', 'password', 'phone');
 
         $customer               = AccountService::register($credentials);
         $guestCartProduct       = CartRepo::allCartProducts(0);

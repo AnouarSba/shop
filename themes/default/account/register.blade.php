@@ -10,10 +10,10 @@
       <div class="form-group">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="email">邮箱</span>
+            <span class="input-group-text" id="email"></span>
           </div>
           <input type="text" name="register[email]" class="form-control" value="{{ old('register.email') }}"
-                 placeholder="邮箱地址">
+                 placeholder="">
         </div>
         @error('register.email')
         <x-admin::form.error :message="$message"/>
@@ -25,9 +25,9 @@
       <div class="form-group">
         <div class="input-group">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="password">密码</span>
+            <span class="input-group-text" id="password"></span>
           </div>
-          <input type="password" name="register[password]" class="form-control" placeholder="密码">
+          <input type="password" name="register[password]" class="form-control" placeholder="">
         </div>
         @error('register.password')
         <x-admin::form.error :message="$message"/>

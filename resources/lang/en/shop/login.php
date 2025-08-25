@@ -16,6 +16,7 @@ return [
     'customer_rejected'       => 'The customer is rejected',
     'description'             => 'Already our customer?',
     'email'                   => 'Email',
+    'phone'                   => 'Phone',
     'email_address'           => 'Email Address',
     'email_err'               => 'Please enter a valid email address!',
     'email_or_password_error' => 'Email or Password is incorrect!',

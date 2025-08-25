@@ -57,7 +57,6 @@
     @hook('product_list.item.name.before')
     <div class="product-name">{{ $product['name_format'] }}</div>
      @php
-info($product);
 @endphp
     @if ((system_setting('base.show_price_after_login') and current_customer()) or !system_setting('base.show_price_after_login'))
       <div class="product-price">

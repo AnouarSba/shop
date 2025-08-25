@@ -96,6 +96,8 @@ $categories = Brand::orderBy('sort_order')->where('status', 1)->get()->map(funct
                 $product->descriptions->where('locale', app()->getLocale())->first()
             )->name ?? '';
             $product->price_format = currency_format(optional($product->skus->first())->price ?? 0);
+            // dd($product->masterSku);
+            $product->sku_id = $product->masterSku->id;
             return $product;
         });
 

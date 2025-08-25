@@ -16,6 +16,7 @@ return [
     'customer_rejected'       => 'Cet avis utilisateur n\'a pas réussi',
     'description'             => 'Déjà notre client ?',
     'email'                   => 'courrier',
+    'phone'                   => 'telephone',
     'email_address'           => 'adresse e-mail',
     'email_err'               => 'Sil vous plaît, mettez une adresse email valide!',
     'email_or_password_error' => 'Erreur de courriel ou de mot de passe!',

@@ -83,7 +83,14 @@
               </el-form-item>
               @endhookwrapper
 
+
               @hook('account.login.new.confirm_password.bottom')
+
+              @hookwrapper('account.login.new.phone')
+              <el-form-item label="{{ __('shop/login.phone') }}" prop="phone">
+                <el-input @keyup.enter.native="checkedBtnLogin('registerForm')" type="text" v-model="registerForm.phone" placeholder="{{ __('shop/login.phone') }}"></el-input>
+              </el-form-item>
+              @endhookwrapper
               @hookwrapper('account.login.new.register')
               <div class="mt-5 mb-3">
                 <button type="button" @click="checkedBtnLogin('registerForm')" class="btn btn-dark btn-lg w-100 fw-bold"><i class="bi bi-person"></i> {{ __('shop/login.register') }}</button>
@@ -109,6 +116,7 @@
 
         registerForm: {
           email: '',
+          phone: '',
           password: '',
           password_confirmation: '',
         },
@@ -131,6 +139,11 @@
           password: [
             {required: true, message: '{{ __('shop/login.enter_password')}}', trigger: 'change'}
           ],
+          phone: [{
+            required: true,
+            message: '{{ __('shop/login.enter_phone')}}',
+            trigger: 'blur'
+          }, ],
         },
         @stack('login.vue.data')
       },
